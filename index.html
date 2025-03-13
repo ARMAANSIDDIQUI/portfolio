@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #172937;
+            padding: 15px 20px;
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .name img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+
+        .name p {
+            color: white;
+            font-weight: bold;
+        }
+
+        .redirects {
+            display: flex;
+            gap: 20px;
+        }
+
+        .redirects a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .redirects a:hover {
+            color: orange;
+        }
+
+        .redirects button {
+            background-color: transparent;
+            border: 1px solid orange;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .redirects button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .redirects button:hover {
+            background-color: orange;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #172937;
+            padding: 50px 20px;
+        }
+
+        .part1 {
+            max-width: 50%;
+            color: white;
+        }
+
+        .part1 h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+        }
+
+        .part1 h3 {
+            font-size: 22px;
+            color: orange;
+            margin-bottom: 15px;
+            margin-left: 50px;
+        }
+
+        .part1 p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-left: 50px;
+        }
+
+        .part2 img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-right: 60px;
+        }
+
+
+
+
+        .body {
+            display: flex;
+            background-color: #FDFDFD;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to right,rgb(255, 255, 184),white, rgb(255, 219, 253));
+        }
+
+        
+
+
+
+
+
+        .skills {
+            text-align: center;
+            background-color:transparent;
+            padding: 50px 20px;
+        }
+        
+        .skills h2 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        
+        .skills p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        
+        .skills-display {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            border: 2px ;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skills button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid orange;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .skills img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .skills button:hover {
+            background-color:#172937;
+            color: white;
+            border-color: orange;
+        }
+        
+
+
+
+
+        
+
+
+        .progress{
+            text-align: center;
+            background-color: transparent;
+            padding: 50px 20px;
+        }
+        .progress h1 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        
+        .progress p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .progress button{
+            margin-top:25px;
+            width: 310px;
+            height: 60px;
+            background-color:orange;
+            border: transparent;
+            border-radius: 12px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .topic{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content:center;
+            margin: 50px;
+        }
+
+        .progress-display{
+            height: 300px;
+            width: 435px;
+            margin: 30PX;
+            background-color: #FDFDFD;
+            border-radius: 20px;
+            box-shadow: 1px 1px rgb(169, 169, 169);
+            overflow:hidden ;
+        }
+
+
+
+
+
+        .projects{
+            text-align: center;
+            background-color: transparent;
+            padding: 50px 20px;
+        }
+        .projects h1 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .project-display h2{
+            color: orange;
+        }
+        
+        
+        .projects p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .project-container{
+            display: flex;
+            gap: 30px;
+            margin: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        .project-display{
+            height: 400px;
+            width: 500px;
+            background-color: #FDFDFD;
+            border-radius: 20px;
+            box-shadow: 1px 1px rgb(169, 169, 169);
+            overflow:hidden ;
+        }
+
+        .project-display img{
+            height: 280px;
+            width: 500px;
+        }
+        
+
+
+
+        .education {
+            text-align: center;
+            background-color: transparent;
+            padding: 50px 20px;
+        }
+        
+        .education h1 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .education_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .education-display {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .ed-tag {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin: 15px;
+            height: 150px;
+            width: 450px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .education {
+            text-align: center;
+            background-color: transparent;
+            padding: 50px 20px;
+        }
+        
+        .education h1 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .education_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px;
+            gap: 20px;
+        }
+        
+        .education-display {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .ed-tag {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin: 15px;
+            height: 150px;
+            width: 450px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            text-align: left;
+        }
+        
+        .ed-tag:hover {
+            transform: scale(1.02);
+        }
+        
+        .ed-tag h4 {
+            font-weight: bold;
+            color: black;
+            margin-bottom: 5px;
+        }
+        
+        .ed-tag h5 {
+            color: orange;
+            font-size: 16px;
+        }
+        
+        
+        .ed-tag p {
+            font-weight: bold;
+            color: black;
+            margin-bottom: 5px;
+        }
+        
+        
+
+
+
+        .contact-section {
+            text-align: center;
+            background-color: #172937;
+            padding: 50px 20px;
+            color: white;
+        }
+        
+        .contact-section h2 {
+            color: orange;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1F3A52;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            border: 1px solid transparent;
+        }
+        
+        .contact-card img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-card:hover {
+            border-color: orange;
+            background-color: #263B50;
+        }
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <div class="top">
+        <div class="name">
+            <img src="armaan.jpeg" alt="Profile">
+            <p>ARMAAN SIDDIQUI</p>
+        </div>
+        <div class="redirects">
+            <a href="#skills">Skills</a>
+            <a href="#progress">Progress</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <button><a href="#resume">Resume</a></button>
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="part1">
+            <h1>Hi, I am Armaan Siddiqui</h1>
+            <h3>An aspiring Data Analyst in fruition.</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam, quam euismod hac in id mauris, scelerisque. Fringilla amet, morbi ultricies risus aliquet tristique viverra nisi, mi.
+            </p>
+        </div>
+        <div class="part2">
+            <img src="armaan.jpeg" alt="Profile Picture">
+        </div>
+    </div>
+
+
+    <div class="body"> 
+        <div class="skills" id="skills">
+            <h2>My Skills</h2>
+            <p>Here are some of my skills on which I have been working on for the past 2 years</p>
+            <div class="skills-display">
+                <button><img src="http://imgs.search.brave.com/IpE2gXwsGPuYPoMtGGRzW6VgUzFwVU39OmsKnXkZ-yw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/LmNvbS9pbWFnZS1j/ZG4vaW1hZ2VzL2t0/czkyOHBkL3Byb2R1/Y3Rpb24vZmI3ZjZl/Y2U5ZTcxMTA4ZmNj/ZTI4OWMwYWQxZTA1/Nzg3NDRmNDMyMy0z/NTJ4MzQ5LnBuZz93/PTEwODAmcT03MiZm/bT13ZWJw"> Data Science</button>
+                <button><img src="https://imgs.search.brave.com/rFcbBDD5bdH5FkOvRer3XXxqjxWRNXUwB8BV5uWX-mY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzUwLzg3LzQy/LzM2MF9GXzI1MDg3/NDI5N185ak5wcWJZ/THBlekpiRXF5YURP/MmQ5R0gwUVB2M0Jm/Mi5qcGc" >Machine Learning</button>
+                <button><img src="https://imgs.search.brave.com/i3eIH_L1tOwIu91igmDreX0duT-Zw1haphBqbIalAgE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dzMub3JnL2h0bWwv/bG9nby9kb3dubG9h/ZHMvSFRNTDVfTG9n/b18xMjgucG5n"> HTML</button>
+                <button><img src="https://imgs.search.brave.com/HIRhxw1U6FeggmbVbPLLVpSWULtFe7hk-sZFaDVOWd0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MzBmNWNlZjEw/MTRjMGI1ZTRhYTEu/cG5n" >React</button>
+                <button><img src="https://imgs.search.brave.com/5nY5fVpDicqGrKwwK5yf7-kvc-ukpzi5Wp9N7iMC3Bo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW5vZGUtanMtbG9n/by1pY29uLWRvd25s/b2FkLWluLXN2Zy1w/bmctZ2lmLWZpbGUt/Zm9ybWF0cy0tbm9k/ZWpzLXByb2dyYW1t/aW5nLWxhbmd1YWdl/LXBhY2stbG9nb3Mt/aWNvbnMtMTE3NDky/NS5wbmc_Zj13ZWJw/Jnc9MjU2" >NodeJS</button>
+                <button><img src="https://imgs.search.brave.com/1dSdxU2GDlGcxnbNSj_iU83ak0hLBbK9e5btboQV8gI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/Lzk5L1Vub2ZmaWNp/YWxfSmF2YVNjcmlw/dF9sb2dvXzIuc3Zn" >Javascript</button>
+                <button><img src="https://imgs.search.brave.com/FHAFDfLQ41Rp1NXEIMVJ0xVVZXmpjQYW-YkeJxN2Gd4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naXRo/dWIuY29tL21vbmdv/ZGIvbW9uZ28vcmF3/L21hc3Rlci9kb2Nz/L2xlYWYuc3Zn" >MongoDB</button>
+            </div>
+        </div>
+
+
+
+        <div class="progress" id="progress">
+            <h1>My Progress</h1>
+            <p>Here is a quick demo of my progress so far in Web Development!</p>
+            <a href="https://www.linkedin.com/in/armaan-siddiqui-6902ba294/"><button class="visit">Visit my Lnkedin</button></a>
+            <div class="topic">
+                
+                <div class="progress-display">
+                    <iframe width="435" height="240" src="https://www.youtube.com/embed/hKB-YGF14SY?si=VMrEVtZSqDglLxIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h6>Day 1</h6>
+                    <h3>Topic 1</h3>
+                </div>
+
+                <div class="progress-display">
+                    <iframe width="435" height="240" src="https://www.youtube.com/embed/hKB-YGF14SY?si=VMrEVtZSqDglLxIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h6>Day 2</h6>
+                    <h3>Topic 2</h3>
+                </div>
+                
+                <div class="progress-display">
+                    <iframe width="435" height="240" src="https://www.youtube.com/embed/hKB-YGF14SY?si=VMrEVtZSqDglLxIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h6>day 3</h6>
+                    <h3>Topic 3</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="projects" id="projects">
+            <h1>My Projects</h1>
+            <div class="project-container">
+                <div class="project-display">
+                    <img src="https://imgs.search.brave.com/OO66DY0NpV0WbDbBmzuS7qCBEdPaJBB7RorTJgcDeBE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzIzLzI0LzIw/LzM2MF9GXzEwMjMy/NDIwOTdfS25KNEN1/ejZqcW4yS0FqVndU/c0t6OERqTEpvRmd0/b3YuanBn">
+                    <h2>Project 1</h2>
+                    <h4>About the poject</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam, quam euismod hac in id mauris, scelerisque. Fringilla amet, morbi ultricies risus aliquet tristique viverra nisi, mi.
+                    </p>
+                </div>
+
+                <div class="project-display">
+                    <img src="https://imgs.search.brave.com/OO66DY0NpV0WbDbBmzuS7qCBEdPaJBB7RorTJgcDeBE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzIzLzI0LzIw/LzM2MF9GXzEwMjMy/NDIwOTdfS25KNEN1/ejZqcW4yS0FqVndU/c0t6OERqTEpvRmd0/b3YuanBn">
+                    <h2>Project 2</h2>
+                    <h4>About the poject</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam, quam euismod hac in id mauris, scelerisque. Fringilla amet, morbi ultricies risus aliquet tristique viverra nisi, mi.
+                    </p>
+                </div>
+
+                <div class="project-display">
+                    <img src="https://imgs.search.brave.com/OO66DY0NpV0WbDbBmzuS7qCBEdPaJBB7RorTJgcDeBE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzIzLzI0LzIw/LzM2MF9GXzEwMjMy/NDIwOTdfS25KNEN1/ejZqcW4yS0FqVndU/c0t6OERqTEpvRmd0/b3YuanBn">                    
+                    <h2>Project 3</h2>
+                    <h4>About the poject</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue diam, quam euismod hac in id mauris, scelerisque. Fringilla amet, morbi ultricies risus aliquet tristique viverra nisi, mi.
+                    </p>
+                </div>
+            </div>
+        </div>            
+
+
+
+
+
+
+
+        <div class="education" id="education">
+            <h1>My Education</h1>
+            <h5>
+                My education has been a journey of self-discovery and growth.
+            </h5>
+            <h5>
+                Here are some details.
+            </h5>
+            <div class="education_container">
+                <div class="education-display">
+                    <div class="ed-tag">
+                        <div>
+                            <h4>P.M.S Public School (CBSE)</h4>
+                            <h5>2007-2022</h5>
+                            <p>Schooling from nursery to 12</p>
+                        </div>
+                        <img src="https://imgs.search.brave.com/U4w3W9Dj8OgxlP8isbeEtBqUDOzFX06-AtnPvyxj3CI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ncmFw/aC5mYWNlYm9vay5j/b20vODk5MzE3MDU2/ODMyNjMwL3BpY3R1/cmU_dHlwZT1sYXJn/ZQ" height="90px" width="90px" border-radius="100%">
+                    </div>
+                    <div class="ed-tag">
+                        <div>
+                            <h4>Moradabad Institute Of Technology</h4>
+                            <h5>2022-2026</h5>
+                            <p>B.tech In CSE</p>
+                        </div>
+                        <img src="https://imgs.search.brave.com/ryP3BWAVilfc-arUCfg-ubGcrrhi7O_Zb699i1y7fLk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWR1Y2F0bHkuY29t/L19uZXh0L2ltYWdl/P3VybD1odHRwczov/L2FwaS5lZHVjYXRs/eS5jb20vL3JhaWxz/L2FjdGl2ZV9zdG9y/YWdlL2Jsb2JzL2V5/SmZjbUZwYkhNaU9u/c2liV1Z6YzJGblpT/STZJa0pCYUhCQk16/UlVRbWM5UFNJc0lt/VjRjQ0k2Ym5Wc2JD/d2ljSFZ5SWpvaVlt/eHZZbDlwWkNKOWZR/PT0tLWJkNWRlNDVi/MjdiMDExY2I5YmQ4/ZmJlYTc4NzgwMjQy/MWFjNDBhNDQvbW9y/YWRhYmFkX2luc3Rp/dHV0ZV9vZl90ZWNo/bm9sb2d5X3Byb2Zp/bGUmdz0zODQwJnE9/NzU" height="90px" width="90px" border-radius="100%">
+                    </div>
+                </div>
+
+                <div class="education-display">
+                    <div class="ed-tag">
+                        <div>
+                            <h4>NPTEL</h4>
+                            <h5>2022-2026</h5>
+                            <p>Certifications</p>
+                        </div>
+                        <img src="https://imgs.search.brave.com/XO6EYn7Gmv1LDZrePiBTFrz639z8ao7TID8j2n1kNNo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL3N3YXlh/bTJfY2VudHJhbC9h/c3NldHMvaW1nL3N3/YXlhbV9pbWFnZXMv/TkNfbG9nby9OUFRF/TF9sb2dvXzEyOC5w/bmc" height="90px" width="90px" border-radius="100%">
+                    </div>
+                    <div class="ed-tag">
+                        <div>
+                            <h4>Explorin Academy</h4>
+                            <h5>2024-2026</h5>
+                            <p>DSA and Web Development</p>
+                        </div>
+                        <img src="https://www.explorin.io/assets/explorin-new-logo-CCL0znd9.png" height="90px" width="90px" border-radius="100%">
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+    <div class="contact-section">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me for any questions or opportunities!</p>
+        
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/armaan-siddiqui-6902ba294/" target="_blank" class="contact-card">
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-orange.png" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="mailto:armaansiddiqui.pms@gmail.cpm" class="contact-card">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-courrier-electronique-orange.png" alt="Email"> armaansiddiqui.pms@gmail.com
+            </a>
+            <a href="https://github.com/ARMAANSIDDIQUI" target="_blank" class="contact-card">
+                <img src="https://imgs.search.brave.com/cWPsJML-l7RUV7vqAXqLhLszBCFhfHgvYGzWq36mUow/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aWNvbnNkYi5jb20v/aWNvbnMvcHJldmll/dy9vcmFuZ2UvZ2l0/aHViLTExLXh4bC5w/bmc" alt="GitHub"> GitHub
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
