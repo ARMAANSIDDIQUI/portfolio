@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-       * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -37,7 +37,6 @@
         .name p {
             color: white;
             font-weight: bold;
-            font-size: 18px;
         }
         
         .redirects {
@@ -79,7 +78,6 @@
             align-items: center;
             background-color: #172937;
             padding: 50px 20px;
-            flex-wrap: wrap;
         }
         
         .part1 {
@@ -114,48 +112,16 @@
             border: 3px solid white;
             margin-right: 60px;
         }
-        @media (max-width: 768px) {
-            .top {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
         
-            .name {
-                flex-direction: column;
-                gap: 5px;
-            }
-        
-            .redirects {
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
-        
-            .intro {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 10px;
-            }
-        
-            .part1 {
-                max-width: 100%;
-            }
-        
-            .part1 h1,
-            .part1 h3,
-            .part1 p {
-                margin-left: 0;
-            }
-        
-            .part2 img {
-                width: 250px;
-                height: 250px;
-                margin-right: 0;
-            }
+        .body {
+            display: flex;
+            background-color: #FDFDFD;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(255, 255, 184), white, rgb(255, 219, 253));
         }
         
-        /* Skills Section */
         .skills {
             text-align: center;
             background-color: transparent;
@@ -209,19 +175,7 @@
             color: white;
             border-color: orange;
         }
-        @media (max-width: 768px) {
-            .skills-display {
-                flex-direction: column;
-                align-items: center;
-            }
         
-            .skills button {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-        
-        /* Progress Section */
         .progress {
             text-align: center;
             background-color: transparent;
@@ -251,14 +205,29 @@
             color: white;
             font-size: 20px;
         }
-        @media (max-width: 768px) {
-            .progress button {
-                width: 100%;
-                max-width: 300px;
-            }
+        
+        .project-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px;
         }
         
-        /* Contact Section */
+        .project-display {
+            height: 400px;
+            width: 500px;
+            background-color: #FDFDFD;
+            border-radius: 20px;
+            box-shadow: 1px 1px rgb(169, 169, 169);
+            overflow: hidden;
+        }
+        
+        .project-display img {
+            height: 280px;
+            width: 500px;
+        }
+        
         .contact-section {
             text-align: center;
             background-color: #172937;
@@ -281,7 +250,6 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
         }
         
         .contact-card {
@@ -293,12 +261,6 @@
             border-radius: 8px;
             color: white;
             border: 1px solid transparent;
-            transition: 0.3s ease-in-out;
-        }
-        
-        .contact-card img {
-            width: 20px;
-            height: 20px;
         }
         
         .contact-card:hover {
@@ -306,19 +268,74 @@
             background-color: #263B50;
         }
         
+        /* --------- Responsive Design --------- */
         
         @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .name {
+                flex-direction: column;
+                gap: 5px;
+            }
+        
+            .redirects {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        
+            .intro {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 10px;
+            }
+        
+            .part1 {
+                max-width: 100%;
+            }
+        
+            .part1 h1, 
+            .part1 h3, 
+            .part1 p {
+                margin-left: 0;
+            }
+        
+            .part2 img {
+                width: 250px;
+                height: 250px;
+                margin-right: 0;
+            }
+        
+            .skills-display, 
+            .progress, 
+            .project-container, 
             .contact-links {
                 flex-direction: column;
                 align-items: center;
             }
         
+            .progress button, 
+            .skills button, 
             .contact-card {
                 width: 100%;
                 max-width: 300px;
-                justify-content: center;
+            }
+        
+            .project-display {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+            }
+        
+            .project-display img {
+                width: 100%;
+                height: auto;
             }
         }
+
         
     </style>
 </head>
